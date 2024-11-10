@@ -1,29 +1,131 @@
 .product-card {
-  border: 1px solid #ddd;
-  border-radius: 8px;
-  margin-top: 100px;
+  border: none;
+  border-radius: 10px;
+  background-color: #f9f9f9;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  height: 100%;
 }
 
-.product-card .card-header {
-  font-size: 0.9em;
-  font-weight: bold;
+.product-card:hover {
+  transform: scale(1.03);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
 }
 
-.product-card .card-title {
-  font-size: 1.2em;
+.card-img-top {
+  height: 250px;
+  object-fit: cover;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
+
+.card-body {
+  padding: 1.5rem;
+}
+
+.card-title {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.6rem;
   color: #333;
+  font-weight: 700;
 }
 
-.product-card .card-text {
-  font-size: 0.95em;
+.card-category {
+  font-size: 1rem;
+  color: #bba56a;
+  font-style: italic;
+}
+
+.description {
+  font-size: 1rem;
   color: #666;
+  margin-bottom: 1rem;
 }
 
-.product-card .card-footer .btn {
-  background-color: #007bff;
+.price-quantity {
+  font-family: 'Roboto', sans-serif;
+  font-size: 1.1rem;
+  color: #444;
+}
+
+.price {
+  font-weight: 700;
+  color: #bba56a;
+}
+
+.quantity {
+  color: #5a5a5a;
+}
+
+.add-to-cart-btn {
+  background-color: #333;
   color: #fff;
+  font-weight: 600;
+  border-radius: 20px;
+  padding: 0.6rem 1.5rem;
+  transition: background-color 0.3s ease;
+  border: none;
+  margin-top: 15px;
 }
 
-.product-card .card-footer .btn:hover {
-  background-color: #0056b3;
+.add-to-cart-btn:hover {
+  background-color: #bba56a;
+  color: #333;
+  cursor: pointer;
+}
+
+/* Responsive Layout */
+@media (max-width: 768px) {
+  .product-card {
+    margin-bottom: 20px;
+  }
+
+  .product-card .card-body {
+    padding: 1rem;
+  }
+
+  .card-title {
+    font-size: 1.4rem;
+  }
+
+  .card-category {
+    font-size: 0.9rem;
+  }
+
+  .description {
+    font-size: 0.95rem;
+  }
+
+  .price {
+    font-size: 1.1rem;
+  }
+
+  .add-to-cart-btn {
+    padding: 0.5rem 1.2rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .product-card .card-body {
+    padding: 0.8rem;
+  }
+
+  .card-title {
+    font-size: 1.2rem;
+  }
+
+  .card-category {
+    font-size: 0.85rem;
+  }
+
+  .description {
+    font-size: 0.9rem;
+  }
+
+  .price {
+    font-size: 1rem;
+  }
+
+  .add-to-cart-btn {
+    padding: 0.5rem 1rem;
+  }
 }
