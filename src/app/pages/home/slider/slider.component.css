@@ -1,0 +1,11 @@
+.carousel-container {
+  width: 100%;
+  max-width: 100%;
+  overflow: hidden;
+}
+
+.carousel-image {
+  height: 600px;
+  width: 100%;
+  object-fit: cover;
+}

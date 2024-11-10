@@ -1,5 +1,8 @@
 import { Component } from '@angular/core';
 import {FormBuilder, FormGroup, Validators} from "@angular/forms";
+import {AuthService} from "../../services/auth.service";
+import {Router} from "@angular/router";
+import {SweetAlertService} from "../../services/sweet-alert.service";
 
 @Component({
   selector: 'app-sign-up',
@@ -9,7 +12,7 @@ import {FormBuilder, FormGroup, Validators} from "@angular/forms";
 export class SignUpComponent {
   signupForm: FormGroup;
 
-  constructor(private fb: FormBuilder) {
+  constructor(private fb: FormBuilder, private authService: AuthService, private router: Router, private swal: SweetAlertService) {
     this.signupForm = this.fb.group({
       name: ['', [Validators.required, Validators.minLength(2), Validators.maxLength(50)]],
       password: ['', [Validators.required, Validators.minLength(8)]],
@@ -20,8 +23,19 @@ export class SignUpComponent {
 
   onSubmit(): void {
     if (this.signupForm.valid) {
-      console.log('Signup form data:', this.signupForm.value);
-      // Add signup logic here (e.g., sending data to the server)
+      this.authService.signup(this.signupForm.value).subscribe(
+        {
+          next: (res: any) => {
+             this.swal.successNotification("Sign Up", "Signed up succesfully")
+            setTimeout(() => {
+              this.router.navigateByUrl('/home');
+            }, 1000);
+          },
+          error: err => {
+             this.swal.failNotification("Sign Up", "User is already registered")
+          }
+        }
+      )
     }
   }
 }

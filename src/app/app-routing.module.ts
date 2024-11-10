@@ -8,18 +8,16 @@ import {AboutUsComponent} from "./pages/about-us/about-us.component";
 import {ProfileComponent} from "./pages/profile/profile.component";
 import {ProductsComponent} from "./pages/products/products.component";
 import {ProductDetailsComponent} from "./pages/product-details/product-details.component";
-import {ShoppingCartComponent} from "./pages/shopping-cart/shopping-cart.component";
 import {ProductCardComponent} from "./shared/product-card/product-card.component";
 
 const routes: Routes = [
-  {path: '', redirectTo: 'home-page', pathMatch: 'full'},
+  {path: '', redirectTo: 'home', pathMatch: 'full'},
   {path: 'home', component:HomeComponent},
   {path: 'login', component: LoginComponent},
   {path: 'sign-up', component: SignUpComponent},
   {path: 'about-us', component: AboutUsComponent},
   {path: 'products', component:ProductsComponent},
   {path: 'product-details',component:ProductDetailsComponent  },
-  {path: 'shopping-cart', component: ShoppingCartComponent},
   { path: 'product-card', component: ProductCardComponent},
   // {path: 'lecturer/:id', component: LecturerComponent},
   // {path: 'lecturers', component: LecturersComponent},

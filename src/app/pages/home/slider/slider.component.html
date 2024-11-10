@@ -1,0 +1,13 @@
+<div class="carousel-container">
+  <ngb-carousel
+    *ngIf="images && images.length > 0"
+    [showNavigationArrows]="showNavigationArrows"
+    [showNavigationIndicators]="showNavigationIndicators"
+    [pauseOnHover]="pauseOnHover">
+    <ng-template ngbSlide *ngFor="let image of images">
+      <div class="picsum-img-wrapper">
+        <img [src]="image" [alt]="image" class="carousel-image">
+      </div>
+    </ng-template>
+  </ngb-carousel>
+</div>

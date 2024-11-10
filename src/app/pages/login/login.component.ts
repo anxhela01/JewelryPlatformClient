@@ -1,5 +1,7 @@
 import { Component } from '@angular/core';
 import {FormBuilder, FormGroup, Validators} from "@angular/forms";
+import {AuthService} from "../../services/auth.service";
+import {SweetAlertService} from "../../services/sweet-alert.service";
 
 @Component({
   selector: 'app-login',
@@ -9,7 +11,7 @@ import {FormBuilder, FormGroup, Validators} from "@angular/forms";
 export class LoginComponent {
   loginForm: FormGroup;
 
-  constructor(private fb: FormBuilder) {
+  constructor(private fb: FormBuilder, private auth : AuthService, private swal : SweetAlertService) {
     this.loginForm = this.fb.group({
       email: ['', [Validators.required, Validators.email]],
       password: ['', Validators.required]

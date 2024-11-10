@@ -8,7 +8,6 @@ import { HomeComponent } from './pages/home/home.component';
 import { AboutUsComponent } from './pages/about-us/about-us.component';
 import { ProductsComponent } from './pages/products/products.component';
 import { ProductDetailsComponent } from './pages/product-details/product-details.component';
-import { ShoppingCartComponent } from './pages/shopping-cart/shopping-cart.component';
 import { ProfileComponent } from './pages/profile/profile.component';
 import { HeaderComponent } from './shared/header/header.component';
 import { FooterComponent } from './shared/footer/footer.component';
@@ -16,6 +15,11 @@ import { ProductCardComponent } from './shared/product-card/product-card.compone
 import {AppRoutingModule} from "./app-routing.module";
 import {RouterLink, RouterOutlet} from "@angular/router";
 import {FormsModule, ReactiveFormsModule} from "@angular/forms";
+import { SliderComponent } from './pages/home/slider/slider.component';
+import {NgbCarouselModule, NgbModule} from "@ng-bootstrap/ng-bootstrap";
+import { MostSoldComponent } from './pages/home/most-sold/most-sold.component';
+import {HTTP_INTERCEPTORS, HttpClient, HttpClientModule} from "@angular/common/http";
+import {AuthInterceptor} from "./interceptor/auth.interceptor";
 
 @NgModule({
   declarations: [
@@ -26,11 +30,12 @@ import {FormsModule, ReactiveFormsModule} from "@angular/forms";
     AboutUsComponent,
     ProductsComponent,
     ProductDetailsComponent,
-    ShoppingCartComponent,
     ProfileComponent,
     HeaderComponent,
     FooterComponent,
-    ProductCardComponent
+    ProductCardComponent,
+    SliderComponent,
+    MostSoldComponent
   ],
   imports: [
     BrowserModule,
@@ -38,9 +43,17 @@ import {FormsModule, ReactiveFormsModule} from "@angular/forms";
     RouterOutlet,
     FormsModule,
     ReactiveFormsModule,
-    RouterLink
+    RouterLink,
+    NgbModule,
+    HttpClientModule
   ],
-  providers: [],
+  providers: [
+    {
+      provide : HTTP_INTERCEPTORS,
+      useClass : AuthInterceptor,
+      multi: true
+    }
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
