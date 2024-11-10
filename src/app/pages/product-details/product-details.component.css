@@ -1,0 +1,87 @@
+/* products.component.css */
+
+/* Container and Row Spacing */
+.container {
+  padding-top: 20px;
+}
+
+/* Profile Information Section */
+.card {
+  border-radius: 8px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+  margin-bottom: 20px;
+}
+
+.card-title {
+  font-weight: 600;
+}
+
+.card-body {
+  text-align: center;
+}
+
+.card .btn-primary {
+  margin-top: 15px;
+  color: #fff;
+  background-color: #007bff;
+  border: none;
+}
+
+.card .btn-primary:hover {
+  background-color: #0056b3;
+}
+
+/* Product Information Section */
+.card-header {
+  background-color: #f8f9fa;
+  font-weight: bold;
+  font-size: 1.2em;
+  text-align: center;
+  padding: 10px;
+}
+
+.card-body .card-title {
+  font-size: 1.3em;
+  font-weight: bold;
+}
+
+.card-body p {
+  margin-bottom: 10px;
+  font-size: 1em;
+}
+
+/* Product Images */
+.card-body img {
+  width: 100%;
+  height: auto;
+  margin-bottom: 15px;
+  border-radius: 5px;
+}
+
+.card-body h6 {
+  font-size: 1.1em;
+  font-weight: bold;
+  margin-top: 20px;
+}
+
+/* Add to Cart Button */
+.btn-success {
+  width: 100%;
+  font-weight: bold;
+}
+
+.btn-success:hover {
+  background-color: #28a745;
+}
+
+/* Responsiveness */
+@media (max-width: 768px) {
+  .card-body {
+    text-align: center;
+  }
+
+  .row .col-md-4, .row .col-md-8 {
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
+}

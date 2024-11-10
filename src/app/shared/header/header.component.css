@@ -1,0 +1,57 @@
+/* Custom CSS for navbar */
+.navbar {
+  font-family: 'Georgia', serif;
+  background-color: #2c3e50; /* Deep blue color */
+}
+
+.navbar-brand {
+  font-size: 1.8rem;
+  font-weight: bold;
+}
+
+.navbar-brand .text-gold {
+  color: #f39c12; /* Gold color */
+}
+
+.navbar-nav .nav-item .nav-link {
+  color: #ecf0f1; /* Light gray color for links */
+  font-size: 1.1rem;
+  font-weight: 500;
+}
+
+.navbar-nav .nav-item .nav-link:hover {
+  color: #f39c12; /* Gold hover effect */
+}
+
+.navbar-toggler {
+  border-color: #f39c12; /* Gold border for toggler */
+}
+
+.navbar-toggler-icon {
+  background-color: #f39c12; /* Gold color for toggler icon */
+}
+
+/* Adjust space between Sign Up and Login links */
+.nav-item.sign-up {
+  margin-right: 20px; /* More space between Sign Up and Login */
+}
+
+.nav-item.login {
+  margin-left: 10px; /* Optional: Adjust left space for Login */
+}
+
+.navbar .form-control {
+  border-radius: 25px;
+  padding: 10px;
+  border: 2px solid #f39c12; /* Gold border for search input */
+}
+
+.navbar .btn-outline-light {
+  border: 2px solid #f39c12; /* Gold border for button */
+  color: #f39c12;
+}
+
+.navbar .btn-outline-light:hover {
+  background-color: #f39c12;
+  color: #fff;
+}

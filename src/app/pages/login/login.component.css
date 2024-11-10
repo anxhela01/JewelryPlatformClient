@@ -1,0 +1,88 @@
+/* Background with Elegant Pattern */
+.login-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background-size: cover;
+  background-position: center;
+  background-color: rgba(255, 255, 255, 0.85); /* Light overlay */
+  backdrop-filter: blur(3px);
+  margin-top: 40px;
+}
+
+/* Card Styling with a Luxurious Feel */
+.login-card {
+  width: 100%;
+  max-width: 400px;
+  border-radius: 12px;
+  overflow: hidden;
+  background: #fff;
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2);
+  border-top: 3px solid #d4af37; /* Gold border */
+}
+
+/* Card Body */
+.login-card .card-body {
+  padding: 2rem;
+  color: #333;
+}
+
+/* Title and Subtitle */
+.login-card h3 {
+  font-family: 'Playfair Display', serif;
+  font-weight: 700;
+  color: #333;
+}
+
+.login-card p {
+  color: #777;
+  font-size: 0.9rem;
+}
+
+/* Form Styling */
+.form-control {
+  border-radius: 50px;
+  padding: 0.75rem 1rem;
+  border: 1px solid #d4af37;
+  background-color: #fafafa;
+  transition: border-color 0.3s;
+}
+
+.form-control:focus {
+  border-color: #d4af37;
+  box-shadow: 0 0 0 0.2rem rgba(212, 175, 55, 0.25);
+}
+
+/* Error Text */
+.error-text {
+  color: #dc3545;
+  font-size: 0.85rem;
+}
+
+/* Luxurious Button Style */
+.login-btn {
+  background-color: #d4af37;
+  border: none;
+  border-radius: 50px;
+  font-weight: bold;
+  padding: 0.75rem;
+  color: #fff;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.login-btn:hover {
+  background-color: #b5892a;
+  transform: translateY(-1px);
+}
+
+/* Gold Link Styling */
+.link-gold {
+  color: #d4af37;
+  font-weight: 600;
+  transition: color 0.3s ease;
+}
+
+.link-gold:hover {
+  color: #b5892a;
+}

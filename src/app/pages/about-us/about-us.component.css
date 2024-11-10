@@ -1,0 +1,100 @@
+/* Primary color for text */
+.text-primary {
+  color: #d4af37 !important;  /* Jewelry gold color */
+}
+
+/* Secondary color for text */
+.text-secondary {
+  color: #8b4513;  /* Warm brown color */
+}
+
+/* Large display title with bold weight */
+.display-4 {
+  font-weight: bold;
+  font-size: 3rem;
+  margin-bottom: 1rem;
+}
+
+/* Lead text style (slightly larger, muted tone) */
+.lead {
+  font-size: 1.15em;
+  color: #6c757d; /* Muted gray for a subtle look */
+  margin-top: 1.5rem;
+}
+
+/* Icons for values section */
+.bi-gem, .bi-heart, .bi-leaf {
+  font-size: 1.25em;
+  color: #d4af37;  /* Gold color for icons */
+  margin-right: 8px;
+}
+
+/* Ensure spacing between sections */
+.mt-5 {
+  margin-top: 3rem !important;
+}
+
+/* Styling for the "Our Story" and "Our Values" sections */
+h2.text-secondary {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  font-weight: 600;
+}
+
+/* Style for the testimonial section */
+.card {
+  border: 1px solid #e3e3e3;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  margin-bottom: 2rem;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+/* Styling for the card images */
+.card-img-top {
+  height: 250px;
+  object-fit: cover;
+  border-top-left-radius: 8px;
+  border-top-right-radius: 8px;
+}
+
+/* Card body content alignment */
+.card-body {
+  text-align: center;
+}
+
+/* Style for team members' names and roles */
+.card-title {
+  font-size: 1.25rem;
+  font-weight: 600;
+}
+
+.card-text {
+  font-size: 1rem;
+  color: #6c757d;
+  margin-bottom: 0;
+}
+
+/* Make sure cards have equal width on large screens */
+.col-md-4 {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 1.5rem;
+}
+
+/* Centered section titles */
+.text-center h2 {
+  font-size: 2rem;
+  color: #8b4513;
+  font-weight: 600;
+}
+
+/* Ensuring consistent layout */
+.container {
+  padding: 5rem 2rem;
+}

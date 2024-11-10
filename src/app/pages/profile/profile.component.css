@@ -1,0 +1,54 @@
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f4f4f4;
+  margin:0;
+  padding: 0;
+}
+
+.container {
+  width: 80%;
+  margin: 100px auto;
+  background-color: #fff;
+  padding: 20px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.profile-header {
+  display: flex;
+  align-items: center;
+  padding-bottom: 20px;
+  border-bottom: 1px solid #ddd;
+}
+
+.profile-header img {
+  width: 100px;
+  height: 100px;
+  margin-right: 20px;
+}
+
+.section {
+  margin-top: 20px;
+}
+
+.section h2 {
+  margin-bottom: 10px;
+  font-size: 22px;
+  border-bottom: 1px solid #ddd;
+  padding-bottom: 5px;
+}
+
+.section p, .section ul {
+  margin: 5px 0;
+}
+
+.section ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.section ul li {
+  background: #eee;
+  margin: 5px 0;
+  padding: 10px;
+  border-radius: 5px;
+}

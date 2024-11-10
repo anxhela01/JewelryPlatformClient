@@ -1,0 +1,75 @@
+<div class="container signup-container pt-5">
+  <div class="card signup-card">
+    <div class="card-body">
+      <h3 class="text-center mb-4">Create an Account</h3>
+      <form (ngSubmit)="onSubmit()" [formGroup]="signupForm">
+        <!-- Name Field -->
+        <div class="mb-3">
+          <label for="name" class="form-label text-dark">Name</label>
+          <input
+            type="text"
+            id="name"
+            class="form-control"
+            formControlName="name"
+            placeholder="Enter your name"
+            required
+          />
+          <div *ngIf="signupForm.get('name')?.invalid && signupForm.get('name')?.touched" class="error-text">
+            Please provide a valid name (2-50 characters).
+          </div>
+        </div>
+
+        <!-- Password Field -->
+        <div class="mb-3">
+          <label for="password" class="form-label text-dark">Password</label>
+          <input
+            type="password"
+            id="password"
+            class="form-control"
+            formControlName="password"
+            placeholder="Enter your password"
+            required
+          />
+          <div *ngIf="signupForm.get('password')?.invalid && signupForm.get('password')?.touched" class="error-text">
+            Password must be at least 8 characters.
+          </div>
+        </div>
+
+        <!-- Email Field -->
+        <div class="mb-3">
+          <label for="email" class="form-label text-dark">Email</label>
+          <input
+            type="email"
+            id="email"
+            class="form-control"
+            formControlName="email"
+            placeholder="Enter your email"
+            required
+          />
+          <div *ngIf="signupForm.get('email')?.invalid && signupForm.get('email')?.touched" class="error-text">
+            Please enter a valid email address.
+          </div>
+        </div>
+
+        <!-- Phone Number Field -->
+        <div class="mb-3">
+          <label for="phoneNumber" class="form-label text-dark">Phone Number</label>
+          <input
+            type="tel"
+            id="phoneNumber"
+            class="form-control"
+            formControlName="phoneNumber"
+            placeholder="Enter your phone number"
+            required
+          />
+          <div *ngIf="signupForm.get('phoneNumber')?.invalid && signupForm.get('phoneNumber')?.touched" class="error-text">
+            Enter a valid phone number (10-15 digits).
+          </div>
+        </div>
+
+        <!-- Submit Button -->
+        <button type="submit" class="btn btn-primary w-100 signup-btn" [disabled]="signupForm.invalid">Sign Up</button>
+      </form>
+    </div>
+  </div>
+</div>
